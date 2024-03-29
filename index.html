@@ -22,6 +22,111 @@
       width: 200px;
       flex-shrink: 0; /* Empêche le sidebar de rétrécir */
     }
+    <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Touten1</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans Condensed', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #8bc6ec; /* Bleu clair */
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .sidebar {
+      background-color: rgb(76, 99, 175); /* Bleu */
+      color: white;
+      padding: 20px;
+      width: 200px;
+      flex-shrink: 0; /* Empêche le sidebar de rétrécir */
+    }
+    .sidebar h2 {
+      font-size: 50px; /* Modifier la taille de la police */
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      flex: 1;
+    }
+    nav, article {
+      background-color: #8bc6ec; /* Bleu clair légèrement plus foncé */
+      padding: 20px;
+      border-radius: 10px;
+      flex: 1;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    nav ul li {
+      margin-bottom: 10px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    h1, h2, h3 {
+      color: blue;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      align-self: center; /* Centre le footer horizontalement */
+      margin-top: auto; /* Place le footer en bas */
+    }
+    .header h2 {
+      font-size: 80px;
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>ToutEn1</h2>
+    <nav>
+      <ul>
+        <li><a href="cal.html">Calculette</a></li>
+        <li><a href="con.html">Convertisseur</a></li>
+        <li><a href="#">IA en attente...</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="container">
+    <header>
+      <h1>ToutEn1</h1>
+      <p class="subheader">Votre boîte à outils numérique ultime</p>
+    </header>
+
+    <article>
+      <h2>Tout En 1:</h2>
+      <p>Votre boîte à outils numérique ultime pour simplifier vos tâches quotidiennes. Explorez nos fonctionnalités variées et simplifiez votre quotidien dès aujourd'hui avec Touten1.</p>
+
+      <h3>Sous-section</h3>
+      <p>Ca arrive...</p>
+
+      <h3>Autre sous-section</h3>
+      <p>Ca arrive...</p>
+    </article>
+  </div>
+
+  <footer>
+    <p>© 2050 Touten1 - Fait par Youcef, Mohamed et Haroun pour le projet L1 d'informatique.</p>
+  </footer>
+</body>
+</html>
     .container {
       max-width: 1200px;
       margin: auto;
