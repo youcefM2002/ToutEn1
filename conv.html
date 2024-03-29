@@ -56,7 +56,15 @@
         <form id="converterForm">
             <input type="number" id="inputValue" placeholder="Entrez la valeur">
             <br>
-            <select id="unitType">
+            <select id="unitFrom">
+                <option value="km">Kilomètres (km)</option>
+                <option value="m">Mètres (m)</option>
+                <option value="cm">Centimètres (cm)</option>
+                <option value="kg">Kilogrammes (kg)</option>
+                <option value="g">Grammes (g)</option>
+                <option value="mg">Milligrammes (mg)</option>
+            </select>
+            <select id="unitTo">
                 <option value="km">Kilomètres (km)</option>
                 <option value="m">Mètres (m)</option>
                 <option value="cm">Centimètres (cm)</option>
@@ -74,33 +82,42 @@
         document.getElementById('converterForm').addEventListener('submit', function(event) {
             event.preventDefault();
             var inputValue = parseFloat(document.getElementById('inputValue').value);
-            var unitType = document.getElementById('unitType').value;
+            var unitFrom = document.getElementById('unitFrom').value;
+            var unitTo = document.getElementById('unitTo').value;
             var result;
-            switch(unitType) {
+            switch(unitFrom) {
                 case 'km':
-                    result = inputValue * 1000;
-                    document.getElementById('result').innerHTML = inputValue + " kilomètre(s) équivaut à " + result + " mètre(s).";
+                    switch(unitTo) {
+                        case 'm':
+                            result = inputValue * 1000;
+                            document.getElementById('result').innerHTML = inputValue + " kilomètre(s) équivaut à " + result + " mètre(s).";
+                            break;
+                        case 'cm':
+                            result = inputValue * 100000;
+                            document.getElementById('result').innerHTML = inputValue + " kilomètre(s) équivaut à " + result + " centimètre(s).";
+                            break;
+                        // Ajouter d'autres conversions si nécessaire
+                    }
                     break;
                 case 'm':
-                    result = inputValue / 1000;
-                    document.getElementById('result').innerHTML = inputValue + " mètre(s) équivaut à " + result + " kilomètre(s).";
+                    switch(unitTo) {
+                        case 'km':
+                            result = inputValue / 1000;
+                            document.getElementById('result').innerHTML = inputValue + " mètre(s) équivaut à " + result + " kilomètre(s).";
+                            break;
+                        // Ajouter d'autres conversions si nécessaire
+                    }
                     break;
                 case 'cm':
-                    result = inputValue / 100;
-                    document.getElementById('result').innerHTML = inputValue + " centimètre(s) équivaut à " + result + " mètre(s).";
+                    switch(unitTo) {
+                        case 'km':
+                            result = inputValue / 100000;
+                            document.getElementById('result').innerHTML = inputValue + " centimètre(s) équivaut à " + result + " kilomètre(s).";
+                            break;
+                        // Ajouter d'autres conversions si nécessaire
+                    }
                     break;
-                case 'kg':
-                    result = inputValue * 1000;
-                    document.getElementById('result').innerHTML = inputValue + " kilogramme(s) équivaut à " + result + " gramme(s).";
-                    break;
-                case 'g':
-                    result = inputValue / 1000;
-                    document.getElementById('result').innerHTML = inputValue + " gramme(s) équivaut à " + result + " kilogramme(s).";
-                    break;
-                case 'mg':
-                    result = inputValue / 1000000;
-                    document.getElementById('result').innerHTML = inputValue + " milligramme(s) équivaut à " + result + " kilogramme(s).";
-                    break;
+                // Ajouter d'autres cas pour les autres unités de départ si nécessaire
             }
         });
     </script>
