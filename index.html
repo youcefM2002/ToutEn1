@@ -12,8 +12,8 @@
       padding: 0;
       background-color: #8bc6ec; /* Bleu clair */
       display: flex;
+      flex-direction: column;
       min-height: 100vh;
-      flex-direction: column; /* Pour placer le footer en bas */
     }
     .sidebar {
       background-color: rgb(76, 99, 175); /* Bleu */
@@ -25,12 +25,12 @@
       max-width: 1200px;
       margin: auto;
       padding: 20px;
-      flex: 1; /* Pour pousser le footer vers le bas */
+      flex: 1;
     }
     nav, article {
       background-color: #8bc6ec; /* Bleu clair légèrement plus foncé */
       padding: 20px;
-      border-radius: 10px; /* Ajout de coins arrondis */
+      border-radius: 10px;
       flex: 1;
     }
     nav ul {
@@ -54,10 +54,12 @@
     footer {
       text-align: center;
       padding: 20px;
+      align-self: center; /* Centre le footer horizontalement */
+      margin-top: auto; /* Place le footer en bas */
     }
     .header h2 {
-      font-size: 80px; /* Modification de la taille de police */
-      margin-bottom: 0; /* Suppression de la marge inférieure */
+      font-size: 80px;
+      margin-bottom: 0;
     }
   </style>
 </head>
@@ -85,14 +87,19 @@
       <p>Votre boîte à outils numérique ultime pour simplifier vos tâches quotidiennes. Explorez nos fonctionnalités variées et simplifiez votre quotidien dès aujourd'hui avec Touten1.</p>
 
       <h3>Sous-section</h3>
-      <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
+      <p>Ca arrive...</p>
 
       <h3>Autre sous-section</h3>
-      <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+      <p>Ca arrive...</p>
     </article>
   </div>
 
   <footer>
+    <p>© 2050 Touten1 - Fait par Youcef, Mohamed et Haroun pour le projet L1 d'informatique.</p>
+  </footer>
+</body>
+</html>
+
     <p>© 2050 Touten1 - Fait par Youcef, Mohamed et Haroun pour le projet L1 d'informatique.</p>
   </footer>
 </body>
