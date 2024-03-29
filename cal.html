@@ -15,6 +15,19 @@
             align-items: center;
             height: 100vh;
         }
+        .header {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: blue;
+            font-size: 24px;
+        }
+        .subheader {
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            font-size: 18px;
+        }
         .calculator {
             background-color: #fff;
             border-radius: 10px;
@@ -47,7 +60,8 @@
     </style>
 </head>
 <body>
-    <h1 style="text-align: center;">Ma Super Calculatrice</h1>
+    <div class="header">Touten1</div>
+    <div class="subheader">Ma Super Calculatrice</div>
     <div class="calculator">
         <input type="text" id="result" readonly>
         <br>
@@ -87,6 +101,10 @@
             var result = eval(document.getElementById('result').value);
             document.getElementById('result').value = result;
         }
+    </script>
+</body>
+</html>
+
     </script>
 </body>
 </html>
