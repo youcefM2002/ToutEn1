@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertisseur</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        input[type="number"] {
+            width: 200px;
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 220px;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #result {
+            font-size: 18px;
+            font-weight: bold;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Convertisseur</h2>
+        <form id="converterForm">
+            <input type="number" id="kmInput" placeholder="Kilomètres">
+            <br>
+            <input type="number" id="kgInput" placeholder="Kilogrammes">
+            <br>
+            <input type="submit" value="Convertir">
+        </form>
+        <div id="result"></div>
+    </div>
 
+    <script>
+        document.getElementById('converterForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var km = parseFloat(document.getElementById('kmInput').value);
+            var m = km * 1000; // Conversion des kilomètres en mètres
+            var kg = parseFloat(document.getElementById('kgInput').value);
+            var g = kg * 1000; // Conversion des kilogrammes en grammes
+            document.getElementById('result').innerHTML = km + " km équivaut à " + m + " m. " + kg + " kg équivaut à " + g + " g.";
+        });
+    </script>
+</body>
+</html>
