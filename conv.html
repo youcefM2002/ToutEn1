@@ -46,6 +46,7 @@
             font-size: 18px;
             font-weight: bold;
             color: blue;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -53,9 +54,16 @@
     <div class="container">
         <h2>Convertisseur</h2>
         <form id="converterForm">
-            <input type="number" id="kmInput" placeholder="Kilomètres">
+            <input type="number" id="inputValue" placeholder="Entrez la valeur">
             <br>
-            <input type="number" id="kgInput" placeholder="Kilogrammes">
+            <select id="unitType">
+                <option value="km">Kilomètres (km)</option>
+                <option value="m">Mètres (m)</option>
+                <option value="cm">Centimètres (cm)</option>
+                <option value="kg">Kilogrammes (kg)</option>
+                <option value="g">Grammes (g)</option>
+                <option value="mg">Milligrammes (mg)</option>
+            </select>
             <br>
             <input type="submit" value="Convertir">
         </form>
@@ -63,14 +71,4 @@
     </div>
 
     <script>
-        document.getElementById('converterForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            var km = parseFloat(document.getElementById('kmInput').value);
-            var m = km * 1000; // Conversion des kilomètres en mètres
-            var kg = parseFloat(document.getElementById('kgInput').value);
-            var g = kg * 1000; // Conversion des kilogrammes en grammes
-            document.getElementById('result').innerHTML = km + " km équivaut à " + m + " m. " + kg + " kg équivaut à " + g + " g.";
-        });
-    </script>
-</body>
-</html>
+        do
