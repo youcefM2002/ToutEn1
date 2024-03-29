@@ -35,6 +35,8 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
             text-align: center;
+            width: 250px;
+            margin: 0 auto;
         }
         input[type="text"] {
             width: calc(100% - 20px);
@@ -45,10 +47,16 @@
             border-bottom: 2px solid #ddd;
             outline: none;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 5px;
+        }
         input[type="button"] {
             width: 50px;
             height: 50px;
-            margin: 5px;
             font-size: 18px;
             border: none;
             background-color: #E04F30;
@@ -65,28 +73,35 @@
     <div class="subheader">Ma Super Calculatrice</div>
     <div class="calculator">
         <input type="text" id="result" readonly>
-        <br>
-        <input type="button" value="1" onclick="appendToResult('1')">
-        <input type="button" value="2" onclick="appendToResult('2')">
-        <input type="button" value="3" onclick="appendToResult('3')">
-        <input type="button" value="+" onclick="appendToResult('+')">
-        <br>
-        <input type="button" value="4" onclick="appendToResult('4')">
-        <input type="button" value="5" onclick="appendToResult('5')">
-        <input type="button" value="6" onclick="appendToResult('6')">
-        <input type="button" value="-" onclick="appendToResult('-')">
-        <br>
-        <input type="button" value="7" onclick="appendToResult('7')">
-        <input type="button" value="8" onclick="appendToResult('8')">
-        <input type="button" value="9" onclick="appendToResult('9')">
-        <input type="button" value="*" onclick="appendToResult('*')">
-        <br>
-        <input type="button" value="0" onclick="appendToResult('0')">
-        <input type="button" value="." onclick="appendToResult('.')">
-        <input type="button" value="/" onclick="appendToResult('/')">
-        <input type="button" value="C" onclick="clearResult()">
-        <br>
-        <input type="button" value="=" onclick="calculate()">
+        <table>
+            <tr>
+                <td><input type="button" value="1" onclick="appendToResult('1')"></td>
+                <td><input type="button" value="2" onclick="appendToResult('2')"></td>
+                <td><input type="button" value="3" onclick="appendToResult('3')"></td>
+                <td><input type="button" value="+" onclick="appendToResult('+')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="appendToResult('4')"></td>
+                <td><input type="button" value="5" onclick="appendToResult('5')"></td>
+                <td><input type="button" value="6" onclick="appendToResult('6')"></td>
+                <td><input type="button" value="-" onclick="appendToResult('-')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="appendToResult('7')"></td>
+                <td><input type="button" value="8" onclick="appendToResult('8')"></td>
+                <td><input type="button" value="9" onclick="appendToResult('9')"></td>
+                <td><input type="button" value="*" onclick="appendToResult('*')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="0" onclick="appendToResult('0')"></td>
+                <td><input type="button" value="." onclick="appendToResult('.')"></td>
+                <td><input type="button" value="/" onclick="appendToResult('/')"></td>
+                <td><input type="button" value="C" onclick="clearResult()"></td>
+            </tr>
+            <tr>
+                <td colspan="4"><input type="button" value="=" onclick="calculate()"></td>
+            </tr>
+        </table>
     </div>
 
     <script>
@@ -106,6 +121,3 @@
 </body>
 </html>
 
-    </script>
-</body>
-</html>
