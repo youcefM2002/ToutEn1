@@ -71,4 +71,38 @@
     </div>
 
     <script>
-        do
+        document.getElementById('converterForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var inputValue = parseFloat(document.getElementById('inputValue').value);
+            var unitType = document.getElementById('unitType').value;
+            var result;
+            switch(unitType) {
+                case 'km':
+                    result = inputValue * 1000;
+                    document.getElementById('result').innerHTML = inputValue + " kilomètre(s) équivaut à " + result + " mètre(s).";
+                    break;
+                case 'm':
+                    result = inputValue / 1000;
+                    document.getElementById('result').innerHTML = inputValue + " mètre(s) équivaut à " + result + " kilomètre(s).";
+                    break;
+                case 'cm':
+                    result = inputValue / 100;
+                    document.getElementById('result').innerHTML = inputValue + " centimètre(s) équivaut à " + result + " mètre(s).";
+                    break;
+                case 'kg':
+                    result = inputValue * 1000;
+                    document.getElementById('result').innerHTML = inputValue + " kilogramme(s) équivaut à " + result + " gramme(s).";
+                    break;
+                case 'g':
+                    result = inputValue / 1000;
+                    document.getElementById('result').innerHTML = inputValue + " gramme(s) équivaut à " + result + " kilogramme(s).";
+                    break;
+                case 'mg':
+                    result = inputValue / 1000000;
+                    document.getElementById('result').innerHTML = inputValue + " milligramme(s) équivaut à " + result + " kilogramme(s).";
+                    break;
+            }
+        });
+    </script>
+</body>
+</html>
