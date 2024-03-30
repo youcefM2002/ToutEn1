@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code Generator</title>
-    <script src="https://cdn.jsdelivr.net/npm/qrcode@latest/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://raw.githubusercontent.com/davidshimjs/qrcodejs/main/qrcode.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -48,16 +49,14 @@
     <script>
         function generateQRCode() {
             var input = document.getElementById("input").value;
-            console.log("Input:", input); // Vérifiez si l'entrée est capturée correctement
             var qrcode = new QRCode(document.getElementById("qrcode"), {
                 text: input,
                 width: 256,
                 height: 256,
                 colorDark: "#000000",
                 colorLight: "#ffffff",
-                correctLevel: QRCode.CorrectLevel.H // Error correction level: High
+                correctLevel: QRCode.CorrectLevel.H
             });
-            console.log("QR Code generated successfully."); // Vérifiez si le QR code est généré avec succès
         }
     </script>
 </body>
