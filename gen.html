@@ -9,11 +9,12 @@
             font-family: Arial, sans-serif;
             text-align: center;
             background-color: #8bc6ec;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+        }
+        #container {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
         }
         #password {
             margin: 20px auto;
@@ -41,9 +42,11 @@
     </style>
 </head>
 <body>
-    <h2>Password Generator</h2>
-    <div id="password"></div>
-    <button id="generateBtn" onclick="generatePassword()">Generate Password</button>
+    <div id="container">
+        <h2>Password Generator</h2>
+        <div id="password"></div>
+        <button id="generateBtn" onclick="generatePassword()">Generate Password</button>
+    </div>
 
     <script>
         function generatePassword() {
@@ -59,8 +62,5 @@
             document.getElementById("password").textContent = password;
         }
     </script>
-</body>
-</html>
-
 </body>
 </html>
