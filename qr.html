@@ -41,13 +41,14 @@
     <h2>QR Code Generator</h2>
     <input type="text" id="input" placeholder="Enter text or URL">
     <br>
-    <button id="generateBtn" onclick="generateqrcode()">Generate QR Code</button>
+    <button id="generateBtn" onclick="generateQRCode()">Generate QR Code</button>
     <br>
     <div id="qrcode"></div>
 
     <script>
-        function generateqrcode() {
+        function generateQRCode() {
             var input = document.getElementById("input").value;
+            console.log("Input:", input); // Vérifiez si l'entrée est capturée correctement
             var qrcode = new QRCode(document.getElementById("qrcode"), {
                 text: input,
                 width: 256,
@@ -56,6 +57,7 @@
                 colorLight: "#ffffff",
                 correctLevel: QRCode.CorrectLevel.H // Error correction level: High
             });
+            console.log("QR Code generated successfully."); // Vérifiez si le QR code est généré avec succès
         }
     </script>
 </body>
