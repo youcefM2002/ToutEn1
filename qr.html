@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@latest/qrcode.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #8bc6ec;
+            padding-top: 50px;
+        }
+        #qrcode {
+            margin: 20px auto;
+        }
+        #input {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #generateBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        #generateBtn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>QR Code Generator</h2>
+    <input type="text" id="input" placeholder="Enter text or URL">
+    <br>
+    <button id="generateBtn" onclick="generateQRCode()">Generate QR Code</button>
+    <br>
+    <div id="qrcode"></div>
 
+    <script>
+        function generateQRCode() {
+            var input = document.getElementById("input").value;
+            var qrcode = new QRCode(document.getElementById("qrcode"), {
+                text: input,
+                width: 256,
+                height: 256,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H // Error correction level: High
+            });
+        }
+    </script>
+</body>
+</html>
