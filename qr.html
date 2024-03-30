@@ -41,12 +41,12 @@
     <h2>QR Code Generator</h2>
     <input type="text" id="input" placeholder="Enter text or URL">
     <br>
-    <button id="generateBtn" onclick="generateQRCode()">Generate QR Code</button>
+    <button id="generateBtn" onclick="generateqrcode()">Generate QR Code</button>
     <br>
     <div id="qrcode"></div>
 
     <script>
-        function generateQRCode() {
+        function generateqrcode() {
             var input = document.getElementById("input").value;
             var qrcode = new QRCode(document.getElementById("qrcode"), {
                 text: input,
