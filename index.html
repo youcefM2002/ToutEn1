@@ -3,111 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Touten1</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet">
-  <style>
-    body {
-  font-family: 'Open Sans Condensed', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #FFF; 
-  display: flex;
-  flex-direction: row; /* Changement de la direction en ligne */
-}
- 
-  .sidebar {
-  background-color: #262a2f; /* Bleu */
-  color: white;
-  padding: 20px;
-  width: 200px;
-  height: 100vh; /* Empêche le sidebar de rétrécir */
-}
-
-.sidebar h2 {
-  font-size: 40px; /* Modifier la taille de la police */
-  
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-  flex: 1;
-}
-
-     article {
-      background-color: #FFF; /* Bleu clair légèrement plus foncé */
-      padding: 20px;
-      border-radius: 10px;
-      flex: 1;
-    }
-    nav {
-      background: #494eea;
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    nav ul li {
-      margin-bottom: 10px;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-    }
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-    h1, h2, h3 {
-      color: #262a2f;
-    }
-    footer {
-      text-align: center; /* Centre le texte horizontalement */
-      padding: 20px;
-      margin-top: auto; /* Place le footer en bas */
-    }
-    .header h2 {
-      font-size: 80px;
-      margin-bottom: 0;
-    }
-  </style>
+  <title>Touten1 - Votre Boîte à Outils Numérique</title>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <div class="sidebar">
-    <h2>ToutEn1</h2>
-    <nav>
-      <ul>
-        <li><a href="https://youcefm2002.github.io/tes/">Generateur de qr code</a></li>
-        <li><a href="gen.html">Generateur de mot de passe</a></li>
-        <li><a href="cal.html">Calculette</a></li>
-        <li><a href="con.html">Convertisseur</a></li>
-        <li><a href="https://chat.openai.com/">IA en attente...</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-
   <div class="container">
-    <header>
-      <h1>ToutEn1</h1>
-      <p class="subheader">Votre boîte à outils numérique ultime</p>
-    </header>
+    <div class="sidebar" id="sidebar">
+       <h2>ToutEn1</h2>
+      <nav>
+        <ul>
+          <li><a href="https://youcefm2002.github.io/tes/">Générateur de QR code</a></li>
+          <li><a href="gen.html">Générateur de mot de passe</a></li>
+          <li><a href="cal.html">Calculette</a></li>
+          <li><a href="con.html">Convertisseur</a></li>
+          <li><a href="https://chat.openai.com/">IA en attente...</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
 
-    <article>
-      <h2>Tout En 1:</h2>
-      <p>Votre boîte à outils numérique ultime pour simplifier vos tâches quotidiennes. Explorez nos fonctionnalités variées et simplifiez votre quotidien dès aujourd'hui avec Touten1.</p>
+    <div class="content" id="content">
+      <header>
+        <h1>ToutEn1</h1>
+        <p class="subheader">Votre boîte à outils numérique ultime</p>
+      </header>
 
-      <h3>Sous-section</h3>
-      <p>Ca arrive...</p>
-
-      <h3>Autre sous-section</h3>
-      <p>Ca arrive...</p>
-    </article>
+      <section class="features">
+        <div class="feature">
+          <h2>Générateur de QR code</h2>
+          <p>Générez rapidement des QR codes pour partager du texte ou des liens.</p>
+        </div>
+        <div class="feature">
+          <h2>Générateur de mot de passe</h2>
+          <p>Créez des mots de passe forts et sécurisés pour vos comptes en ligne.</p>
+        </div>
+        <div class="feature">
+          <h2>Calculette</h2>
+          <p>Effectuez des opérations mathématiques de base rapidement et facilement.</p>
+        </div>
+        <div class="feature">
+          <h2>Convertisseur</h2>
+          <p>Convertissez différentes unités telles que la devise, le poids, la longueur, etc.</p>
+        </div>
+      </section>
+    </div>
   </div>
 
   <footer>
     <p>© 2050 Touten1 - Fait par Youcef, Mohamed et Haroun pour le projet L1 d'informatique.</p>
   </footer>
-</body>
+
+  <button id="toggleButton">Ouvrir le sidebar</button>
+
+  <script src="script.js"></script>
+</body> 
 </html>
