@@ -95,7 +95,7 @@ footer {
   left: 20px;
   z-index: 1001;
   padding: 10px 15px;
-  background-color: #262a2f;
+  background-color: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
   color: white;
   border: none;
   cursor: pointer;
