@@ -30,6 +30,38 @@
 
 
         #password {
+           <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de mot de passe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #262a2f;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 400px;
+            padding: 25px 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #FFF;
+        border-radius: 10px;
+        }
+
+
+
+        #password {
             width: 100%;
             height: 50px;
             border: 1px solid #494eea;
@@ -39,6 +71,60 @@
             border-radius: 5px;
             color: #262a2f;
             background: #fff;
+            font-size: 24px; /* Réduit la taille de la police */
+        }
+        #generateBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        #generateBtn:hover {
+            background-color: #0056b3;
+        }
+        .site-name {
+            font-size: 24px; /* Taille de la police */
+            font-weight: bold; /* Poids de la police */
+            color: #FFF; 
+            position: absolute; /* Position absolue pour le placer dans le coin supérieur gauche */
+            top: 10px; /* Distance du haut */
+            left: 10px; /* Distance de la gauche */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="site-name">ToutEn1</div>
+    
+    <div class="container">
+
+        <h2>Générateur de mot de passe</h2>
+        <label for="length">Taille que vous souhaitez:</label>
+        <input type="number" id="length" min="1" max="50" value="12">
+        <div id="password"></div>
+        <button id="generateBtn" onclick="generatePassword()">Générer un mot de passe</button>
+    </div>
+
+    <script>
+        function generatePassword() {
+            var length = document.getElementById("length").value;
+            var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+{}[]|:;<>,.?/~"; // Définir l'ensemble de caractères pour le mot de passe
+
+            var password = "";
+            for (var i = 0; i < length; i++) {
+                var randomIndex = Math.floor(Math.random() * charset.length);
+                password += charset[randomIndex];
+            }
+
+            document.getElementById("password").textContent = password;
+        }
+    </script>
+</body>
+</html>
             font-size: 24px; /* Réduit la taille de la police */
         }
         #generateBtn {
