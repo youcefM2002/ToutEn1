@@ -105,3 +105,7 @@ footer {
 #toggleButton:hover {
   background-color: #494eea;
 }
+.sidebar a {
+  color: #ffffff; /* Changer la couleur du texte des liens */
+}
+
