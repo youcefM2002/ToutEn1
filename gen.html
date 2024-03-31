@@ -9,12 +9,12 @@
             font-family: Arial, sans-serif;
             text-align: center;
             background-color: #262a2f;
-        }
-        #container {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         #password {
             width: 100%;
@@ -26,10 +26,9 @@
             border-radius: 5px;
             color: #262a2f;
             background: #fff;
-            font-size: 30px;
+            font-size: 24px; /* Réduit la taille de la police */
         }
         #generateBtn {
-            display: inline-block;
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
@@ -45,7 +44,7 @@
     </style>
 </head>
 <body>
-    <div id="container">
+    <div>
         <h2>Générateur de mot de passe</h2>
         <label for="length">Taille que vous souhaitez:</label>
         <input type="number" id="length" min="1" max="50" value="12">
@@ -56,7 +55,7 @@
     <script>
         function generatePassword() {
             var length = document.getElementById("length").value;
-            var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+{}[]|:;<>,.?/~"; // Define the character set for the password
+            var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+{}[]|:;<>,.?/~"; // Définir l'ensemble de caractères pour le mot de passe
 
             var password = "";
             for (var i = 0; i < length; i++) {
@@ -69,3 +68,4 @@
     </script>
 </body>
 </html>
+
